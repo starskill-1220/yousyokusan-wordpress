@@ -1,0 +1,53 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+
+.c-btn {
+  display: block;
+  width: fit-content!important;
+  margin: 0 auto;
+  padding: 0px 0 6px 0;
+  border-bottom: 1px solid c.$text-color;
+  &::after {
+    content: "→";
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transform: translateY(0px);
+  }
+}
+
+.c-btn--white {
+  color: c.$white-color;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0px 0 5px 0;
+  border-bottom: 1px solid c.$white-color;
+  &::after {
+    content: "→";
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+}
+
+.c-btn--cv {
+  display: block;
+  font-size: responsiveValue(1.6rem,1.6rem);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: c.$text-color;
+  color: c.$white-color;
+  transition: 0.3s;
+  &:hover {
+    background-color: c.$white-color;
+    color: c.$text-color;
+    outline: 1px solid c.$text-color;
+    outline: -1px;
+    transition: 0.3s;
+  }
+}

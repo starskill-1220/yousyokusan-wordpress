@@ -1,0 +1,109 @@
+@use "mixin" as *;
+@use "color" as c;
+
+.sp {
+  display: none!important;
+  @include mq(sp) {
+    display: block!important;
+  }
+}
+.pc {
+  display: block!important;
+  @include mq(sp) {
+    display: none!important;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  animation: fadeIn 1s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1s ease 0s 1 normal;
+  background-color: c.$background-color;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:c.$background-color;/* 色を変えたい場合はこちら */
+  z-index: 9999999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s ease;/* 変化させる時間はこちら */
+
+}
+body.fadeout::after {
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+/* bodyのafterにページ最前面の要素を作成 */
+
+.fade {
+  -webkit-animation: fadein 2s ease 2s 1 forwards;
+  animation: fadein 2s ease 2s 1 forwards;
+}
+ 
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  100% {
+    opacity: 0;
+  }
+}
+
+section {
+  padding: responsiveValue(80px,50px) 0;
+  .inner {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+.page-section {
+  padding: responsiveValue(180px,150px) 0 responsiveValue(0px,0px) 0;
+}
+
+#page-about {
+  padding: responsiveValue(50px,50px) 0 responsiveValue(100px,50px) 0;
+}
+
+#page-question, #page-contact {
+  padding: responsiveValue(180px,150px) 0 responsiveValue(100px,50px) 0;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}

@@ -9,7 +9,7 @@
       <title>養殖さんのめだか屋さん</title>
       <meta name="description" content="これはテストです"/>
       <!-- css -->
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css?v=<?php echo date('YmdHis'); ?>" type="text/css" />
       <!-- slickのCSSを追加 -->
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>

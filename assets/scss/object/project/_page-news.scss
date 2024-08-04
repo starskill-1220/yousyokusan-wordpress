@@ -1,0 +1,93 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/fonts" as f;
+
+
+
+#pageNews {
+
+  .p-page-news {
+    .bx-wrapper {
+    width: 100%;
+    background-color: none!important;
+    @include mq(sp) {
+      background-color: c.$white-color;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+    .p-page-news__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include mq(sp) {
+        order: 1;
+        padding:10px 0px;
+      }
+      .p-page-news__item {
+        width: 100%;
+        height: 100%;
+        padding: responsiveValue(40px,30px) responsiveValue(40px,20px);
+        background-color: c.$white-color;
+        border-radius: 15px;
+        outline: 1px solid c.$sub-gray;
+        outline-offset: -8px;
+        margin-bottom: responsiveValue(50px,30px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+          .p-page-news__cat {
+            background-color: red;
+            color: white;
+            font-size: responsiveValue(1.4rem,1.2rem);
+            font-weight: bold;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin-right: responsiveValue(20px,10px);
+            @include mq(sp) {
+              transform: translateX(0px)translateY(1px);
+            }
+          }
+          .p-page-news__date {
+            display:inline-block;
+            font-size:responsiveValue(1.4rem,1.2rem);
+            letter-spacing: 1px;
+            margin-right:10px;
+            color:#777;
+            @include mq(sp) {
+              margin-right: 100px;
+            }
+          }
+          .p-page-news__title {
+            width: 100%;
+            font-size: responsiveValue(1.6rem,1.4rem);
+            display: block;
+            padding:responsiveValue(10px,10px) 0;
+          }
+          .p-page-news__content {
+            font-size: responsiveValue(1.6rem,1.4rem);
+            line-height: responsiveValue(3.0rem,2.5rem);
+            font-family: f.$font-family-zenkaku;
+            font-weight: 500;
+            display: block;
+            padding:20px 0px 0px 0px;
+            @include mq(sp) {
+              padding:10px 0px 0px 0px;
+            }
+            margin-top: responsiveValue(10px,0px);
+            border-top: 1px dashed #737373;
+            img {
+              width: 60%;
+              @include mq(sp) {
+                width: 100%;
+              }
+              margin-top: 20px;
+            }
+          }
+      }
+    }
+  }
+}
+
+
+

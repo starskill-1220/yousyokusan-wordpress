@@ -40,7 +40,7 @@
           そう思った私は、より多くのお客様に、この「ミニチュア錦鯉」をご提供出来るよう<br>
           三色と紅白のメダカに絞り、今も養殖に励んでおります。<br>
         </p>
-        <a class="c-btn--white" href="/about.html">養殖さんのこだわりへ</a>
+        <a class="c-btn--white" href="<?php echo home_url('/about'); ?>">養殖さんのこだわりへ</a>
       </div>
     </section>
     <?php get_template_part('partial/partial-medaka-ranking'); ?>

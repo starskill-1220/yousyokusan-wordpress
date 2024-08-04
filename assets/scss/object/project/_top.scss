@@ -119,6 +119,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    
     a{
       font-size: responsiveValue(1.6rem,1.4rem);
       display: block;
@@ -130,9 +131,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      @include mq(sp) {
-        transform: translateY(5px);
-      }
+
       .p-fv-news__cat {
         background-color: red;
         color: white;
@@ -153,6 +152,11 @@
         color:#777;
         @include mq(sp) {
           margin-right: 100px;
+        }
+      }
+      p {
+        @include mq(sp) {
+          margin-top: 8px;
         }
       }
     }

@@ -38,6 +38,6 @@
             <p>質問がありません。</p>
           <?php endif; ?>
         </div>
-        <a href="<?php echo get_template_directory_uri(); ?>/question.html" class="c-btn">よくある質問へ</a>
+        <a href="<?php echo home_url('/question'); ?>" class="c-btn">よくある質問へ</a>
       </div>
     </section>

@@ -1,0 +1,38 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/mixin" as *;
+
+#pageCampaign {
+  padding: responsiveValue(200px,130px) 0 responsiveValue(100px,50px) 0;
+  .p-campaign__banner-box {
+    width: 90%;
+    @include mq(sp) {
+      width: 100%;
+    }
+    margin: 0 auto;
+    margin-bottom: responsiveValue(30px,20px);
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .p-page-campaign__wrapper {
+    padding: responsiveValue(50px,25px);
+    background-color: c.$white-color;
+    border-radius: 15px;
+    outline: 1px solid c.$sub-gray;
+    outline-offset: -10px;
+    margin-bottom: responsiveValue(50px,25px);
+    .p-page-campaign__title {
+      font-size: responsiveValue(2.4rem,1.6rem);
+      line-height: responsiveValue(3.6rem,2.6rem);
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #737373;
+      margin-bottom: 20px;
+    }
+    .p-page-campaign__content {
+      font-size: responsiveValue(1.6rem,1.4rem);
+      line-height: responsiveValue(2.6rem,2.2rem);
+    }
+  }
+}

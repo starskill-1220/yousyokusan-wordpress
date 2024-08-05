@@ -120,7 +120,7 @@
       width: 100%;
       height: auto;
       @include mq(sp) {
-        height: 100dvh;
+        height: 100vh;
         object-fit: cover;
       }
       position: absolute;
@@ -134,7 +134,6 @@
 
 .reverse {
   flex-direction: row-reverse;
-  
 }
 
 .p-page-about__foot-img--reverse {
@@ -149,7 +148,7 @@
     width: 100%;
     height: auto;
     @include mq(sp) {
-      height: 100dvh;
+      height: 100vh;
       object-fit: cover;
     }
     position: absolute;

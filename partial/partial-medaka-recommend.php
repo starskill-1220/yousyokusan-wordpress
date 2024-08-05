@@ -7,7 +7,7 @@
         <ul class="l-goods__list">
         <?php
         $args = array(
-            'post_type' => 'medaka',
+            'post_type' => 'goods',
             'posts_per_page' => 6  // 最大6つまで表示
         ); // カスタム投稿タイプ works
         $the_query = new WP_Query($args); if($the_query->have_posts()):

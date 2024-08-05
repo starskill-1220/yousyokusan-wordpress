@@ -10,13 +10,24 @@
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
-            'post_type' => 'medaka',
+            'post_type' => 'goods',
             'posts_per_page' => 24,
             'paged' => $paged
         );
         $the_query = new WP_Query($args);
         if ($the_query->have_posts()):
         ?>
+        <div class="p-page-goods__pagination">
+          <?php
+          // ページネーションの表示
+          echo paginate_links(array(
+              'total' => $the_query->max_num_pages,
+              'current' => max(1, get_query_var('paged')),
+              'prev_text' => __('&laquo; 前へ'),
+              'next_text' => __('次へ &raquo;'),
+          ));
+          ?>
+        </div>
         <ul class="l-goods__list">
         <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
         <li class="l-goods__item">

@@ -126,14 +126,15 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 30px;
   .page-numbers {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: responsiveValue(30px,20px);
-    height: responsiveValue(30px,20px);
-    font-size: responsiveValue(1.6rem,1.4rem);
-    line-height: responsiveValue(1.6rem,1.4rem);
+    width: responsiveValue(30px,30px);
+    height: responsiveValue(30px,30px);
+    font-size: responsiveValue(1.6rem,1.6rem);
+    line-height: responsiveValue(1.6rem,1.6rem);
     border: 1px solid c.$text-color;
     border-radius: 5px;
   }

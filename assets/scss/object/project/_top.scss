@@ -8,6 +8,9 @@
 #fv {
   background-color: c.$background-color;
   padding-top: 0;
+  @include mq(sp) {
+    padding-bottom: 0.5px;
+  }
 }
 .p-fv-slider__wrapper--main {
   margin-top: 100px;
@@ -38,6 +41,7 @@
     gap: 5px;
   }
   .p-fv-slider__item {
+    height: 90px;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
@@ -230,7 +234,7 @@
   margin: 0 auto;
   margin-bottom: responsiveValue(20px,20px);
   .l-campaign-slider__item {
-    height: auto;
+    height: 180px;
     margin-right: 10px;
     margin-left: 10px;
     overflow: hidden;
@@ -294,7 +298,7 @@
   margin-bottom: responsiveValue(20px,20px);
   .l-campaign-slider__item {
     width: 100%;
-    height: auto;
+    height: 180px;
     margin-right: 0px;
     margin-left: 0px;
     border-radius: 0px;

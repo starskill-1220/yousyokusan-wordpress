@@ -70,7 +70,6 @@
           <li class="l-header-nav__item"><a href="<?php echo home_url('/'); ?>">とっぷ</a></li>
           <li class="l-header-nav__item"><a href="<?php echo home_url('/about'); ?>">養殖さんのこだわり</a></li>
           <li class="l-header-nav__item"><a href="<?php echo home_url('/goods'); ?>">養殖さんのめだかたち</a></li>
-          <!-- <li class="l-header-nav__item"><a href="<?php echo get_template_directory_uri(); ?>/">お買い物ガイド</a></li> -->
           <li class="l-header-nav__item"><a href="<?php echo home_url('/question'); ?>">よくある質問</a></li>
           <li class="l-header-nav__item"><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
         </ul>

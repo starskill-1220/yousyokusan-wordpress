@@ -367,7 +367,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(responsiveValue(300px,280px), 1fr));
-  gap: responsiveValue(30px,30px);
+  gap: responsiveValue(30px,20px);
   justify-content: space-between;
   // ↓justify-content: center;が効かないので代用
   .p-recommend__item {

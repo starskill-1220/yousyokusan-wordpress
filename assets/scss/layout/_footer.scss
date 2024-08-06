@@ -33,7 +33,7 @@ footer {
       padding: 0 20px;
     }
     .l-footer__logo {
-      width: responsiveValue(300px,280px);
+      width: responsiveValue(350px,320px);
       @include mq(sp) {
         margin-bottom: 20px;
       }
@@ -42,7 +42,7 @@ footer {
       }
     }
     .l-footer__gnav {
-      width: 70%;
+      width: 60%;
       max-width: 1000px;
       min-width: 550px;
       display: flex;

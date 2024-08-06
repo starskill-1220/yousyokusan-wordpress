@@ -8,8 +8,15 @@
         <?php
         $args = array(
             'post_type' => 'goods',
-            'posts_per_page' => 6  // 最大6つまで表示
-        ); // カスタム投稿タイプ works
+            'posts_per_page' => 6,  // 最大6つまで表示
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'goods_tag',
+                    'field'    => 'slug',
+                    'terms'    => 'recommend',
+                ),
+            ),
+        );
         $the_query = new WP_Query($args); if($the_query->have_posts()):
         ?>
         <?php while ($the_query->have_posts()): $the_query->the_post(); ?>

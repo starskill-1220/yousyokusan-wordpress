@@ -65,16 +65,35 @@
           <span></span>
         </p>
       </div>
+      
       <nav class="l-header-nav">
+        <div class="l-header-nav__address">
+          <p class="l-header-nav__address-text">
+            <span>Yousyokusan no Medakayasan</span>
+            <span>1753 Honyabakeimachi Atoda, Nakatsu-shi, Oita-ken</span>
+            <span>Tel.080-2112-4245</span>
+          </p>
+        </div>
         <ul class="l-header-nav__list">
-          <li class="l-header-nav__item"><a href="<?php echo home_url('/'); ?>">とっぷ</a></li>
-          <li class="l-header-nav__item"><a href="<?php echo home_url('/about'); ?>">養殖さんのこだわり</a></li>
-          <li class="l-header-nav__item"><a href="<?php echo home_url('/goods'); ?>">養殖さんのめだかたち</a></li>
-          <li class="l-header-nav__item"><a href="<?php echo home_url('/question'); ?>">よくある質問</a></li>
-          <li class="l-header-nav__item"><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
+          <li class="l-header-nav__item <?php echo is_front_page() ? 'current' : ''; ?>"><a href="<?php echo home_url('/'); ?>">トップ<span class="sp">TOP</span></a></li>
+          <li class="l-header-nav__item <?php echo is_page('about') ? 'current' : ''; ?>"><a href="<?php echo home_url('/about'); ?>">養殖さんのこだわり<span class="sp">ABOUT YOUSYOKUSAN</span></a></li>
+          <li class="l-header-nav__item <?php echo is_page('goods') ? 'current' : ''; ?>"><a href="<?php echo home_url('/goods'); ?>">養殖さんのめだかたち<span class="sp">MEDAKATACHI</span></a></li>
+          <li class="l-header-nav__item <?php echo is_page('question') ? 'current' : ''; ?>"><a href="<?php echo home_url('/question'); ?>">よくある質問<span class="sp">Q&A</span></a></li>
+          <li class="l-header-nav__item <?php echo is_page('contact') ? 'current' : ''; ?>"><a href="<?php echo home_url('/contact'); ?>">お問い合わせ<span class="sp">CONTACT</span></a></li>
         </ul>
-        <?php get_template_part('partial/partial-campaign-sp'); ?>
+        <ul class="l-header-nav__bottom-list sp">
+          <li class="<?php echo is_page('news') ? 'current' : ''; ?>"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
+          <li class="<?php echo is_page('privacy') ? 'current' : ''; ?>"><a href="<?php echo home_url('/privacy'); ?>">お買い物ガイド</a></li>
+          <li class="<?php echo is_page('privacy') ? 'current' : ''; ?>"><a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシーについて</a></li>
+          <li class="<?php echo is_page('terms') ? 'current' : ''; ?>"><a href="<?php echo home_url('/terms'); ?>">特定商取引法に基づく表記</a></li>
+          <li class="<?php echo is_page('company') ? 'current' : ''; ?>"><a href="<?php echo home_url('/company'); ?>">運営会社</a></li>
+        </ul>
+        <div class="c-text sp">
+          <div class="c-text__item">YOUSYOKUSAN NO MEDAKAYASAN</div>
+          <div class="c-text__item">YOUSYOKUSAN NO MEDAKAYASAN</div>
+          <div class="c-text__item">YOUSYOKUSAN NO MEDAKAYASAN</div>
+          <div class="c-text__item">YOUSYOKUSAN NO MEDAKAYASAN</div>
+        </div>
       </nav>
-    </div>
     <?php wp_head(); ?>
   </header>

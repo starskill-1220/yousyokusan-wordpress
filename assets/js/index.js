@@ -191,3 +191,49 @@ var rellax = new Rellax('.rellax', {
   horizontal: false
 });
 
+
+// SP版メニューの無限スクロール
+//アニメーションの速度を計算してCSS変数に
+function calculateLoopAnimationSpeed() {
+  const targets = document.querySelectorAll('.js-tick');
+  if (!targets.length) {
+    return;
+  }
+
+  const distance = window.innerWidth;
+  const mql = window.matchMedia('(min-width: 801px)');
+  const time = mql.matches ? 18 : 9; // ここで時間を調整
+  const speed = distance / time;
+
+  targets.forEach((target) => {
+    const tickElems = target.querySelectorAll('.js-tick-item');
+    if (!tickElems.length) {
+      return;
+    }
+
+    let totalWidth = 0;
+    tickElems.forEach(el => {
+      totalWidth += el.clientWidth;
+    });
+
+    let accumulatedWidth = 0;
+    tickElems.forEach((el, i) => {
+      const elWidth = el.clientWidth;
+      const elTime = Math.floor(elWidth / speed);
+      const elDelay = Math.floor(accumulatedWidth / speed);
+      
+      el.style.setProperty('--tick-duration', `${elTime}s`);
+      el.style.setProperty('--tick-delay', `${-elDelay}s`);
+      
+      accumulatedWidth += elWidth;
+    });
+
+    target.style.setProperty('--total-width', `${totalWidth}px`);
+  });
+}
+
+// ウィンドウのリサイズ時に再計算
+window.addEventListener('resize', calculateLoopAnimationSpeed);
+
+// 初期化時に実行
+calculateLoopAnimationSpeed();

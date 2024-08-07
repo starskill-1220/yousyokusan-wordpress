@@ -8,7 +8,6 @@
               <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-white.png" alt="養殖さんロゴ">
             </a>
         </div>
-        
         <nav class="l-footer__gnav">
           <li><a href="<?php echo home_url('/'); ?>">とっぷ</a></li>
           <li><a href="<?php echo home_url('/about'); ?>">養殖さんのこだわり</a></li>
@@ -24,7 +23,7 @@
         <ul class="l-footer-bottom__list">
           <li><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
           <li><a href="<?php echo home_url('/privacy'); ?>">お買い物ガイド</a></li>
-          <li><a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシー</a></li>
+          <li><a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシーについて</a></li>
           <li><a href="<?php echo home_url('/terms'); ?>">特定商取引法に基づく表記</a></li>
           <li><a href="<?php echo home_url('/company'); ?>">運営会社</a></li>
         </ul>

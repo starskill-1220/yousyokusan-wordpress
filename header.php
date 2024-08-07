@@ -83,7 +83,7 @@
         </ul>
         <ul class="l-header-nav__bottom-list sp">
           <li class="<?php echo is_page('news') ? 'current' : ''; ?>"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-          <li class="<?php echo is_page('privacy') ? 'current' : ''; ?>"><a href="<?php echo home_url('/privacy'); ?>">お買い物ガイド</a></li>
+          <li class="<?php echo is_page('guide') ? 'current' : ''; ?>"><a href="<?php echo home_url('/guide'); ?>">お買い物ガイド</a></li>
           <li class="<?php echo is_page('privacy') ? 'current' : ''; ?>"><a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシーについて</a></li>
           <li class="<?php echo is_page('scta') ? 'current' : ''; ?>"><a href="<?php echo home_url('/scta'); ?>">特定商取引法に基づく表記</a></li>
           <li class="<?php echo is_page('company') ? 'current' : ''; ?>"><a href="<?php echo home_url('/company'); ?>">運営会社</a></li>

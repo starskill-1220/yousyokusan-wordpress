@@ -9,7 +9,7 @@
             </a>
         </div>
         <nav class="l-footer__gnav">
-          <li><a href="<?php echo home_url('/'); ?>">とっぷ</a></li>
+          <li><a href="<?php echo home_url('/'); ?>">トップ</a></li>
           <li><a href="<?php echo home_url('/about'); ?>">養殖さんのこだわり</a></li>
           <li><a href="<?php echo home_url('/goods'); ?>">養殖さんのめだかたち</a></li>
           <li><a href="<?php echo home_url('/question'); ?>">よくある質問</a></li>
@@ -22,9 +22,9 @@
         <p class="copy-right">Copyright © YOSYOKUSAN All Rights Reserved.</p>
         <ul class="l-footer-bottom__list">
           <li><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-          <li><a href="<?php echo home_url('/privacy'); ?>">お買い物ガイド</a></li>
+          <li><a href="<?php echo home_url('/guide'); ?>">お買い物ガイド</a></li>
           <li><a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシーについて</a></li>
-          <li><a href="<?php echo home_url('/terms'); ?>">特定商取引法に基づく表記</a></li>
+          <li><a href="<?php echo home_url('/scta'); ?>">特定商取引法に基づく表記</a></li>
           <li><a href="<?php echo home_url('/company'); ?>">運営会社</a></li>
         </ul>
       </div>

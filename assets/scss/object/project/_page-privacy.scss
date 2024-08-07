@@ -1,0 +1,32 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/mixin" as *;
+
+.p-page-privacy {
+  margin-bottom: responsiveValue(50px,20px);
+  .p-page-privacy__wrapper {
+    padding: responsiveValue(50px,20px);
+    border-radius: 15px;
+    background-color: c.$white-color;
+    outline: 1px solid c.$sub-gray;
+    outline-offset: -10px;
+    padding-top: responsiveValue(50px,30px);
+    margin-bottom: responsiveValue(50px,20px);
+    h3 {
+      font-size: responsiveValue(1.6rem,1.4rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: responsiveValue(1.4rem,1.3rem);
+      margin-bottom: 10px;
+    }
+    ol {
+      margin-top: 10px;
+      li {
+        font-size: responsiveValue(1.4rem,1.3rem);
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
-@use "../foundation/color";
+@use "../foundation/color" as c;
 @use "../foundation/mixin" as *;
+@use "../foundation/keyframes" as *;
+@use "../foundation/fonts" as f;
 
 header {
   width: 100%;
@@ -51,33 +53,109 @@ header {
         opacity: 0;
         transition: 0.3s;
       }
+      .l-header-nav__address {
+        display: none;
+        @include mq(sp) {
+          display: flex;
+          margin-top: 60px;
+          margin-left: 2px;
+          .l-header-nav__address-text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            span {
+              width: 100%;
+              display: block;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
       .l-header-nav__list {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         @include mq(sp) {
           width: 100%;
-          @include mq(sp) {
-            flex-direction: row-reverse;
-            justify-content: space-evenly;
-          }
-          margin-top: 150px;
-          margin-bottom: 50px;
+          flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
         .l-header-nav__item {
           font-weight: bold;
           margin: 5px 0;
           @include mq(sp) {
             margin: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
           text-align: center;
           a {
-            font-size: responsiveValue(1.6rem,1.6rem);
+            font-size: responsiveValue(1.6rem,1.4rem);
             letter-spacing: 0px;
             @include mq(sp) {
-              writing-mode: vertical-rl;
-              letter-spacing: 5px;
+              display: flex;
+              flex-direction: column;
+              span {
+                width: fit-content;
+                font-size: 0.8rem;
+                margin-top: 5px;
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+        .current {
+          @include mq(sp) {
+            transform: translateX(10px);
+            position: relative;
+            &::before {
+              content: '';
+              width: 3px;
+              height: 100%;
+              background-color: c.$text-color;
+              position: absolute;
+              top: 1px;
+              left: -8px;
+            }
+          }
+        }
+      }
+      .l-header-nav__bottom-list {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        border-top: 1px solid c.$text-color;
+        @include mq(sp) {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+        li {
+          padding: 5px 0px;
+          @include mq(sp) {
+            a {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .current {
+          @include mq(sp) {
+            display: flex;
+            align-items: center;
+            position: relative;
+            &::before {
+              content: '';
+              display: block;
+              width: 2px;
+              height: 1.4rem;
+              background-color: c.$text-color;
+              margin-right: 5px;
+              transform: translateY(1px);
             }
           }
         }
@@ -94,5 +172,38 @@ header {
       opacity: 1;
       pointer-events: auto;
     }
+  }
+}
+
+.c-text {
+  display: none;
+  @include mq(sp) {
+    overflow: hidden;
+    display: flex!important;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    background-color: c.$text-color;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 5px 0;
+  }
+}
+
+.c-text__item {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  color: c.$white-color;
+  font-family: f.$font-family-zenkaku;
+  font-weight: bold;
+  margin-right: 5px;
+
+  &:nth-child(odd) {
+    animation: MoveLeft 24s -12s infinite linear; //24秒かけて-12秒後に無限ループさせる
+  }
+
+  &:nth-child(even) {
+    animation: MoveLeft2 24s infinite linear; //24秒かけて無限ループさせる
   }
 }

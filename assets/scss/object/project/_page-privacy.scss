@@ -15,16 +15,18 @@
     h3 {
       font-size: responsiveValue(1.6rem,1.4rem);
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: responsiveValue(8px,5px);
     }
     p {
       font-size: responsiveValue(1.4rem,1.3rem);
+      line-height: responsiveValue(2.5rem,2.0rem);
       margin-bottom: 10px;
     }
     ol {
       margin-top: 10px;
       li {
         font-size: responsiveValue(1.4rem,1.3rem);
+        line-height: responsiveValue(2.0rem,1.8rem);
         margin-bottom: 5px;
       }
     }

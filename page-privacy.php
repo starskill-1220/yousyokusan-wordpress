@@ -4,7 +4,7 @@
     <div class="inner">
       <div class="c-section-heading">
         <h2>プライバシーポリシー</h2>
-        <span>Privacy Policy</span>
+        <span>PRIVACY POLICY</span>
       </div>
       <div class="p-page-privacy__wrapper">
         <p>養殖さん（以下、「当店」）は、お客様の個人情報を適切に管理し保護をする事は、当店を運営する上での責務であるという考えです。</p>

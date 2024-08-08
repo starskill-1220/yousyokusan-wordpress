@@ -3,7 +3,7 @@
   <div class="inner">
     <div class="c-section-heading">
       <h2>特定商取引法に基づく表記</h2>
-      <span>Specified Commercial Transaction Act</span>
+      <span>SPECIAL CONSUMER TRANSACTION ACT</span>
     </div>
     <div class="p-page-scta__wrapper">
       <ul class="p-page-scta__list">
